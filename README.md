@@ -5,7 +5,10 @@
 ### Requirements
 - .NET 8 SDK installed ([installation guide](https://learn.microsoft.com/en-us/dotnet/core/install/))
 
-### Run the Project
+### Setup & Run the Project
+1. Ensure you have .NET 8 SDK installed
+2. Clone the repository
+3. Build and launch the service:
 ```bash
 # Restore dependencies (if needed)
 dotnet restore
@@ -13,8 +16,7 @@ dotnet restore
 # Run the project
 dotnet run
 ```
-
-Server will start at http://localhost:5000 (or a port specified by .NET)
+4. Server will start at http://localhost:5000 by default (or a port specified by .NET)
 
 ### Sample Requests
 
