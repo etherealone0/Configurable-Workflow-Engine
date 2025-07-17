@@ -63,20 +63,12 @@ curl http://localhost:5000/workflow-instances/{instanceId}
 ### Assumptions and Design Choices
 
 - All data is stored in-memory using singleton services. No database or file storage is used.
-
 - Workflow definitions and states must be unique by id.
-
 - One initial state is required for each workflow definition.
-
 - A workflow instance must start at the initial state and can only execute actions defined in its workflow.
-
 - Executing an action validates:
-
     - Action is enabled.
-
     - Current state is in the action's fromStates.
-
     - The toState is valid.
-
     - The workflow is not in a final state.
 
