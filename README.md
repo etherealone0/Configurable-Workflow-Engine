@@ -43,13 +43,14 @@ curl http://localhost:5000/workflow-definitions
 
 #### 3. Start Workflow Instance
 ```bash
-curl -X POST http://localhost:5000/workflow-instances \
+curl -X POST http://localhost:5216/workflow-instances \
   -H "Content-Type: application/json" \
-  -d '"wf-1"'
+  -d '{"definitionId": "wf-1"}'
 ```
 
 #### 4. Execute Action on Workflow Instance
 ```bash
+# the instance id should be the id obtained after starting the workflow instance
 curl -X POST http://localhost:5000/workflow-instances/{instanceId}/execute \
   -H "Content-Type: application/json" \
   -d '{ "actionId": "a1" }'
