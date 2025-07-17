@@ -63,7 +63,7 @@ curl -X POST http://localhost:5000/workflow-instances/{instanceId}/execute \
 curl http://localhost:5000/workflow-instances/{instanceId}
 ```
 
-### Assumptions and Design Choices
+### Features
 
 - All data is stored in-memory using singleton services. No database or file storage is used.
 - Workflow definitions and states must be unique by id.
